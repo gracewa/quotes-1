@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Quote} from '../quote'
+import { DatePipe } from '../../../node_modules/@angular/common';
 
 @Component({
   selector: 'app-quote',
@@ -9,11 +10,8 @@ import {Quote} from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes = [
-    new Quote(1,'My Quote 1','Daudi','Ali'),
-    new Quote(2,'My Quote 2','Jinka','Farah'),
-    new Quote(3,'My Quote 3','Shuuti','Areeja')
-  ]
-
+    new Quote(3, 'Daudi Mohamed', 'I have to pray before I come to school', 'dauid', new Date(2019, 1, 14)),
+]
   
   deleteQuote(isComplete,index){
     if (isComplete){
@@ -23,6 +21,16 @@ export class QuoteComponent implements OnInit {
       }  
         }
         }
+
+        addNewQuote(quote){
+          let quoteLength = this.quotes.length;
+          quote.id=quoteLength+1;
+          quote.completeDate = new Date(quote.completeDate)
+          this.quotes.push(quote)
+  
+      }
+
+  
   constructor() { }
 
   ngOnInit() {

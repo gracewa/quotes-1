@@ -1,3 +1,18 @@
 <p>Author Name :  {{quote.author}}</p>
 <p>Publisher Name : {{quote.publisher}}</p>
-<button class="btn btn-danger"  (click) = 'quoteDelete(true)'> Delete a Quote </button>
+<p>Completed Date : {{quote.completeDate}}</p>
+
+<button class="btn btn-danger"  (click) = 'quoteDelete(true)'> 
+    <i class="fa fa-trash"></i>
+</button>
+
+
+<button class="col btn btn-success" (click)="upVote()">
+  {{uvotes}}
+  <i class="fa fa-thumbs-up"></i>
+</button>
+
+<button class="col btn btn-danger" (click)="downVote()">
+  {{dvotes}}
+  <i class="fa fa-thumbs-down"></i>
+</button>
