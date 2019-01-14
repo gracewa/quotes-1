@@ -10,6 +10,7 @@ import { DatePipe } from '../../../node_modules/@angular/common';
 export class QuoteComponent implements OnInit {
 
   quotes = [
+    // new Quote(0,'','','',new Date()),
     new Quote(3, 'Daudi Mohamed', 'I have to pray before I come to school', 'dauid', new Date(2019, 1, 14)),
 ]
   
