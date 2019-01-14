@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular-Quotes';
+
+  quotes: string[];
+
+  constructor(){
+
+    this.quotes = ["My Quote 1","Daudi","Jinkos"];
+  }
+  // title = 'Angular-Quotes';
 }
