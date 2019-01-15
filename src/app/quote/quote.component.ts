@@ -14,7 +14,6 @@ export class QuoteComponent implements OnInit {
     new Quote(3, 'Daudi Mohamed', 'I have to pray before I come to school', 'Farah', new Date(2019, 0, 15)),
 ]
 
-
 uvotes = 0;
 dvotes = 0;
 
