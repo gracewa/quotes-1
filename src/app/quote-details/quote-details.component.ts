@@ -19,6 +19,11 @@ export class QuoteDetailsComponent implements OnInit {
   uvotes = 0;
   dvotes = 0;
 
+  timePass = 0;
+
+  tPassed(){
+    this.timePass = 0;
+  }
   upVote(){
     this.uvotes = this.uvotes + 1;
   }
@@ -27,6 +32,7 @@ export class QuoteDetailsComponent implements OnInit {
     this.dvotes = this.dvotes + 1;
   }
 
+  
 
   constructor() { }
 

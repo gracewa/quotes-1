@@ -11,27 +11,49 @@ export class QuoteComponent implements OnInit {
 
   quotes = [
     // new Quote(0,'','','',new Date()),
-    new Quote(3, 'Daudi Mohamed', 'I have to pray before I come to school', 'dauid', new Date(2019, 1, 14)),
+    new Quote(3, 'Daudi Mohamed', 'I have to pray before I come to school', 'Farah', new Date(2019, 0, 15)),
 ]
-  
-  deleteQuote(isComplete,index){
-    if (isComplete){
-      let toDelete=confirm(`Are you sure you want to delete ${this.quotes[index].quote}`)
-      if(toDelete) {
-        this.quotes.splice(index,1);
-      }  
-        }
-        }
 
-        addNewQuote(quote){
-          let quoteLength = this.quotes.length;
-          quote.id=quoteLength+1;
-          quote.completeDate = new Date(quote.completeDate)
-          this.quotes.push(quote)
-  
-      }
 
+uvotes = 0;
+dvotes = 0;
+
+timePass = 0;
+
+tPassed(){
+  this.timePass = 0;
+}
+upVote(){
+  this.uvotes = this.uvotes + 1;
+}
+
+downVote(){
+  this.dvotes = this.dvotes + 1;
+}
+
+
+deleteQuote(isComplete,index){
+  if (isComplete){
+    let toDelete=confirm(`Are you sure you want to delete ${this.quotes[index].quote}`)
+    if(toDelete) {
+      this.quotes.splice(index,1);
+    }  
+  }
+}
+
+addNewQuote(quote){
+  let quoteLength = this.quotes.length;
+  quote.id=quoteLength+1;
+  quote.completeDate = new Date(quote.completeDate)
+  this.quotes.push(quote)
+
+}
   
+preNum:number
+lastNum:number
+counter:number
+
+
   constructor() { }
 
   ngOnInit() {

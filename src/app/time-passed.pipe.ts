@@ -5,7 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TimePassedPipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
+  transform(value: any): number {
+    console.log(value)
     return null;
   }
 

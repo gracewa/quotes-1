@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { IgxButtonModule } from 'igniteui-angular';
+// import { IgxButtonModule } from 'igniteui-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,7 +25,7 @@ import { TimePassedPipe } from './time-passed.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    IgxButtonModule,
+    // IgxButtonModule,
     BrowserAnimationsModule
   ],
   providers: [],
