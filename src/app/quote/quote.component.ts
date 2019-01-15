@@ -48,10 +48,20 @@ addNewQuote(quote){
 
 }
   
-preNum:number
+startNum:number
 lastNum:number
-counter:number
+ctr:number
 
+hUpvote(){
+  this.startNum = 0
+  this.lastNum = 0
+  
+  for(this.ctr=0 ; this.ctr < this.quotes.length; this.ctr++) {
+    // this.lastNum = this.quotes[this.ctr].uvotes;
+    if(this.lastNum > this.startNum){this.startNum = this.lastNum}
+  }
+  return  this.startNum
+}
 
   constructor() { }
 
