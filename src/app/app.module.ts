@@ -11,6 +11,7 @@ import { HighlightDirective } from './highlight.directive';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TimePassedPipe } from './time-passed.pipe';
+import {TimeAgoPipe} from 'time-ago-pipe';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { TimePassedPipe } from './time-passed.pipe';
     HighlightDirective,
     QuoteFormComponent,
     TimePassedPipe,
+    TimeAgoPipe,
   ],
   imports: [
     BrowserModule,

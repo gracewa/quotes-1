@@ -1,31 +1,7 @@
-<p>Author Name :  {{quote.author}}</p>
-<p>Publisher Name : {{quote.publisher}}</p>
-<p>Created Date : {{quote.completeDate}}</p>
-<p>Time Passed is: {{quote.completeDate|timePassed}} </p>
-<hr>
-<div class="row">
-    <div class="colo-md-3">
-        <button class="btn btn-danger"  (click) = 'quoteDelete(true)'> 
-            <i class="fa fa-trash"></i>
-        </button>
-        
-    </div>
-    <div class="col-md-3">
-            <button class="btn btn-info" (click)="tPassed()">TP</button>
-            </div>
-    <div class="colo-md-3">
-        <button class="btn btn-success" (click)="upVote()">
-            {{uvotes}}
-            <i class="fa fa-thumbs-up"></i>
-          </button>
-          
-    </div>
-    <div class="colo-md-3">
-        <button class="btn btn-danger" (click)="downVote()">
-            {{dvotes}}
-            <i class="fa fa-thumbs-down"></i>
-          </button>
-          <hr>
-    </div>
-  </div>
-
+<div id="details">
+    <p>Author Name : {{quote.author}}</p>
+    <p>Publisher Name : {{quote.publisher}}</p>
+    <p>Created Date : {{quote.completeDate}}</p>
+    <p id="timePassed" >Time Passed is: {{quote.completeDate|timeAgo}} </p>
+    
+</div>
